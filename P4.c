@@ -1,25 +1,19 @@
 //Felipe Vieira Rodrigues
 //11721ETE009
-# include <stdio.h>
 
-int main() 
+#include <stdio.h>
+int main()
 {
-	int cum=0, i;
+	int conv=0, cum=0, i=0;
 	char numero[256];
-
-	printf ("Digite um numero: ");
-	scanf ("%s", &numero);
-	getchar ();
-	
-	for (i=0; numero[i] != '\0'; i++)
+	scanf("%s", numero);
+	getchar();
+	for (i=0; numero[i]; i++)
 	{
-		if (numero[i] >=48 && numero [i] <= 57)
-		{
-			numero[i] = numero[i] - '0';
-			cum = cum*10 + numero[i];
-		}
+		if ((numero[i]-'0')>=0 && (numero[i]-'0')<=9)
+			cum=cum*10+(numero[i]-'0');
+		else;
 	}
-	
-	printf ("\nO numero digitado: %d", cum);
+	printf("%i", cum);
 	return 0;
 }
